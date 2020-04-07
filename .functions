@@ -1,0 +1,43 @@
+
+/* creates a new project in project directory. Make sure that directory exists. */
+function create(){
+    cd ~/Projects/ProjectInitialization/
+    pipenv run python create.py $1
+    cd ../
+    mkdir $1
+    cd ./$1
+    git init
+    touch README.md
+    touch .gitignore
+    touch .env
+    pipenv --three
+    git add .
+    git commit -m "first commit"
+    git remote add origin https://github.com/MAnders333/$1.git
+    git push -u origin master
+    nvim README.md
+}
+
+/* opens project directory in neovim */
+function continue(){
+    cd ~/Projects/$1
+    nvim .
+}
+
+/* runs a script to update my financial overview */
+function financials(){
+    cd ~/Projects/FinancialAnalysis/
+    pipenv run python financials.py $1
+    open -a Microsoft\ Excel monthly_budget.xlsx
+}
+
+/* automizes part of my job application process */
+function apply(){
+    cd ~/Documents/Job\ Applications/
+    curr_date=$(date +%Y | cut -f2 -d"0")$(date +%m)$(date +%d)
+    mkdir $curr_date\_$1
+    cp ./0_cover_letter_templates/191209_$2\_$3\_template.docx ./$curr_date\_$1/$1.docx
+    cp ./0_cv_templates/191209\_$2\_$3.pdf ./$curr_date\_$1/
+    cd ./$curr_date\_$1
+    open $1.docx
+}

@@ -1,0 +1,51 @@
+# system
+alias l="ls"
+alias ll="ls -l"
+alias la="ls -a"
+alias lla="ls -la"
+alias c="clear"
+
+# tmux
+alias ts="tmux new -s"
+alias ta="tmux attach"
+alias tat="tmux attach -t"
+alias tl="tmux ls"
+alias tkt="tmux kill-session -t"
+alias tks="tmux kill-server"
+
+# neovim
+alias v="nvim"
+
+# git
+alias gs='git status -sb'
+alias ga='git add'
+alias gr='git rm'
+alias gb='git branch -v'
+alias gba='git for-each-ref --sort=committerdate refs/heads/ --format="%(authordate:short) %(color:red)%(objectname:short) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))"'
+alias gbd='git for-each-ref --sort=-committerdate refs/heads/ --format="%(authordate:short) %(color:red)%(objectname:short) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))"'
+alias gc='git commit'
+alias gca='git commit --amend'
+alias gcm='git commit -m'
+alias gd='git diff --color-words'
+alias gco='git checkout'
+alias gcom='git checkout master'
+alias gcos='git checkout staging'
+alias gcod='git checkout develop'
+alias gf='git fetch'
+alias gfa='git fetch --all'
+alias gk='gitk --all&'
+alias gx='gitx --all'
+alias gp='git pull --rebase'
+alias gprom='git pull --rebase origin master'
+alias gpros='git pull --rebase origin staging'
+alias gprod='git pull --rebase origin develop'
+alias gpom='git push origin master'
+alias gpos='git push origin staging'
+alias gpod='git push origin develop'
+
+# fzf
+alias f="fzf"
+
+# python
+alias python="python3"
+alias pip="pip3"
