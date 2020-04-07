@@ -9,6 +9,7 @@ The dotfiles contain comments describing the settings in most of the cases.
 
 init.vim is neovim's config file. I basically source the .vimrc file such that neovim has the same configs as vim.
 I have spent a lot of time optimizing my .vimrc. I have divided it into 4 sections:
+
 - basic settings for vim itself which can be found [here](http://vimdoc.sourceforge.net/htmldoc/options.html)
 - remaps of in-house vim keybindings
 - installation of plugins
@@ -16,8 +17,8 @@ I have spent a lot of time optimizing my .vimrc. I have divided it into 4 sectio
 
 ## .zshrc
 
-Sources different dotfiles such as .aliases and .functions, sets default editor to neovim and adds python interpreter to $PATH.
-In order to find out more about neovim, check [it](https://github.com/neovim/neovim) out on Github.
+Sources different dotfiles such as .aliases and .functions, sets default editor to neovim and adds python interpreter to \$PATH.
+In order to find out more about neovim, check it out [here](https://github.com/neovim/neovim).
 
 ## .tmux.conf
 
