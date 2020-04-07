@@ -1,0 +1,7 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "python",
+    "markdown",
+    "json"
+  ]
+}
