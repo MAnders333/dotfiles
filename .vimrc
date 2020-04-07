@@ -35,12 +35,12 @@ vnoremap <leader>s <Esc>:w<CR>gv
 noremap <leader>q :q<CR>
 noremap <leader>w :wq<CR>
 " managing windows more conveniently
-nnoremap <leader>v :vsplit<CR>
-nnoremap <leader>h :split<CR>
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-H> <C-W><C-H>
-nnoremap <C-L> <C-W><C-L>
+noremap <leader>v :vsplit<CR>
+noremap <leader>h :split<CR>
+noremap <C-J> <C-W><C-J>
+noremap <C-K> <C-W><C-K>
+noremap <C-H> <C-W><C-H>
+noremap <C-L> <C-W><C-L>
 " stop highlighting search result
 nnoremap <silent> ,<space> :nohlsearch<CR>
 " simple resizing of splits
