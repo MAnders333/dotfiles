@@ -32,23 +32,26 @@ inoremap jj <Esc>
 " saving and quitting
 nnoremap <leader>s :w<CR>
 vnoremap <leader>s <Esc>:w<CR>gv
-noremap <leader>q :q<CR>
-noremap <leader>w :wq<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>w :wq<CR>
 " managing windows more conveniently
-noremap <leader>v :vsplit<CR>
-noremap <leader>h :split<CR>
-noremap <C-J> <C-W><C-J>
-noremap <C-K> <C-W><C-K>
-noremap <C-H> <C-W><C-H>
-noremap <C-L> <C-W><C-L>
-" stop highlighting search result
-nnoremap <silent> ,<space> :nohlsearch<CR>
+nnoremap <leader>v :vsplit<CR>
+nnoremap <leader>h :split<CR>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-L> <C-W><C-L>
 " simple resizing of splits
 nnoremap - <C-W>-
 nnoremap + <C-W>+
 " simple yanking
 nnoremap <S-Y> y$
 vmap <leader>y "+y
+" inserting blank lines without entering insert mode
+nnoremap <Enter> o<ESC>
+nnoremap <S-Enter> O<ESC>
+" stop highlighting search result
+nnoremap <silent> ,<space> :nohlsearch<CR>
 
 "" install vim-plug as plugin-manager if needed
 if empty(glob('$HOME/.vim/autoload/plug.vim'))
