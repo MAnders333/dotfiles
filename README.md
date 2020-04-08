@@ -5,6 +5,24 @@
 If you should decide to use (parts) of my settings, make sure that you have read and understood them first. Don't just copy settings from the internet.
 The dotfiles contain comments describing the settings in most of the cases.
 
+## Installation
+
+First, you can create a directory and then clone this repo like this:
+
+'''shell
+mkdir -p $HOME/Projects/dotfiles
+cd $HOME/Projects/dotfiles
+git clone https://github.com/MAnders333/dotfiles.git
+'''
+
+Next, you can run
+
+'''shell
+sh install.sh
+'''
+
+to **install** the programs, I typically use in my workflow (change install.sh first, if you don't want these programs installed) and then create symlinks from this repo to your home directory.
+
 ## init.vim
 
 init.vim is neovim's config file. I basically source the .vimrc file such that neovim has the same configs as vim.
