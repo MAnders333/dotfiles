@@ -18,6 +18,7 @@ I have spent a lot of time optimizing my .vimrc. I have divided it into 4 sectio
 ## .zshrc
 
 Sources different dotfiles such as .aliases and .functions, sets default editor to neovim and adds python interpreter to \$PATH.
+The files .promptline.sh and .tmuxline.sh created by [Evgeni Kolev](https://github.com/edkolev) following his instructions for [tmuxline](https://github.com/edkolev/tmuxline.vim) and [promptline](https://github.com/edkolev/promptline.vim).
 In order to find out more about neovim, check it out [here](https://github.com/neovim/neovim).
 
 ## .tmux.conf
