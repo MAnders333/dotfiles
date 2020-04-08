@@ -11,6 +11,9 @@ unset file;
 # set default text editor
 export EDITOR="nvim"
 
+# vim-like behavior in zsh
+set -o vi
+
 # Setting PATH for Python 3.8
 PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/opt/icu4c/bin:${PATH}"
 export PATH
