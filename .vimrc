@@ -49,7 +49,7 @@ nnoremap <S-Y> y$
 vmap <leader>y "+y
 " inserting blank lines without entering insert mode
 nnoremap <Enter> o<ESC>
-nnoremap <S-Enter> O<ESC>
+nnoremap <S-Enter> <S-o><ESC>
 " stop highlighting search result
 nnoremap <silent> ,<space> :nohlsearch<CR>
 
