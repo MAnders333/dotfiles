@@ -9,17 +9,17 @@ The dotfiles contain comments describing the settings in most of the cases.
 
 First, you can create a directory and then clone this repo like this:
 
-'''shell
+```shell
 mkdir -p $HOME/Projects/dotfiles
 cd $HOME/Projects/dotfiles
 git clone https://github.com/MAnders333/dotfiles.git
-'''
+```
 
 Next, you can run
 
-'''shell
+```shell
 sh install.sh
-'''
+```
 
 to **install** the programs, I typically use in my workflow (change install.sh first, if you don't want these programs installed) and then create symlinks from this repo to your home directory.
 
