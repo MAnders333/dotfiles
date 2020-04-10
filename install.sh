@@ -77,10 +77,14 @@ fi
 dotfiles_dir="$HOME/Projects/dotfiles"
 
 # symbolic links for "normal" files
-files="$dotfiles_dir"/*
-for file in $files ; do
-    echo "Creating symlink for $file..."
-    ln -s $file $HOME
+# keymap.json for joplin
+echo "Creating symlink for keymap.json"
+ln -s $HOME/Projects/dotfiles/keymap.json $HOME/.config/joplin/
+# init.vim & coc-settings.json for neovim
+files="$HOME/Projects/dotfiles/init.vim $HOME/Projects/dotfiles/coc-settings.json"
+for file in $files:
+    echo "Creating symlinks"
+    ln -s $file $HOME/.config/nvim/
 done
 
 # symbolic links for dotfiles
