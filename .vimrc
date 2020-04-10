@@ -47,6 +47,9 @@ nnoremap + <C-W>+
 " simple yanking
 nnoremap <S-Y> y$
 vmap <leader>y "+y
+" move selected rows up or down
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 " inserting blank lines without entering insert mode
 nnoremap <Enter> o<ESC>
 nnoremap <S-Enter> <S-o><ESC>
