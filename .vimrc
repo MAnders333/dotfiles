@@ -2,7 +2,6 @@
 syntax on
 set backspace=indent,eol,start " Allow backspace in insert mode                                                                               
 set clipboard+=unnamedplus " allows to copy from vim into other programs
-set colorcolumn=80 " column marks 80 chars
 set expandtab " turns tab into 'tabstop' number of spaces
 set hlsearch " highlights searches
 set ignorecase " ignore case when searching
@@ -11,8 +10,8 @@ set nobackup " prevents backups before writing a file
 set nocompatible " makes vim more useful
 set noerrorbells " turns off errorbells
 set noswapfile " does not create swapfiles anymore - use undo file in undo directory instead
-set nowrap " lines longer than the width of the window won't wrap
-set rnu " show relative line numbering
+set nowrap " lines don't wrap
+set number relativenumber " show relative line numbering
 set shiftwidth=4 " when shifting, indent using 4 spaces
 set smartcase " switch search to case-sensitive when query contains uppercase letter
 set smartindent " smart autoindenting when starting a new line
@@ -27,7 +26,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip " ignores these file-types and director
 " remaps
 " leader key to space
 let mapleader=" "
-" exiting modes 
+" automatically center cursor when entering insert mode
+autocmd InsertEnter * norm zz
+" exit insert mode 
 inoremap jj <Esc>
 " saving and quitting
 nnoremap <leader>s :w<CR>
