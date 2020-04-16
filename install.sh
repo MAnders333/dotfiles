@@ -26,6 +26,15 @@ for program in $programs ; do
     fi 
 done
 
+# install jupyter lab
+which jupyter
+if [[ $? != 0]] ; then
+    echo "Installing jupyter lab"
+    pip install jupyterlab
+else
+    echo "jupyter lab is already installed"
+fi
+
 # install neovim if needed
 which -s nvim
 if [[ $? != 0 ]] ; then
