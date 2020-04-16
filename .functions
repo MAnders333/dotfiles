@@ -1,5 +1,3 @@
-
-/* creates a new project in project directory. Make sure that directory exists. */
 function create(){
     cd ~/Projects/ProjectInitialization/
     pipenv run python create.py $1
@@ -18,20 +16,17 @@ function create(){
     nvim README.md
 }
 
-/* opens project directory in neovim */
 function continue(){
     cd ~/Projects/$1
     nvim .
 }
 
-/* runs a script to update my financial overview */
 function financials(){
     cd ~/Projects/FinancialAnalysis/
     pipenv run python financials.py $1
     open -a Microsoft\ Excel monthly_budget.xlsx
 }
 
-/* automizes part of my job application process */
 function apply(){
     cd ~/Documents/Job\ Applications/
     curr_date=$(date +%Y | cut -f2 -d"0")$(date +%m)$(date +%d)
