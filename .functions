@@ -1,5 +1,5 @@
 function create(){
-    cd ~/Projects/ProjectInitialization/
+    cd ~/Projects/project-initialization/
     pipenv run python create.py $1
     cd ../
     mkdir $1
@@ -8,6 +8,7 @@ function create(){
     touch README.md
     touch .gitignore
     touch .env
+    echo '.env' >> .gitignore
     pipenv --three
     git add .
     git commit -m "first commit"
@@ -22,7 +23,7 @@ function continue(){
 }
 
 function financials(){
-    cd ~/Projects/FinancialAnalysis/
+    cd ~/Projects/financial-analysis/
     pipenv run python financials.py $1
     open -a Microsoft\ Excel monthly_budget.xlsx
 }
