@@ -80,6 +80,13 @@ if [[ ! -d "/Applications/OBS.app" ]] ; then
 else
     echo "OBS is already installed"
 fi
+# libre office
+if [[ ! -d "/Applications/LibreOffice.app" ]] ; then
+    echo "Installing LibreOffice..."
+    brew cask install libreoffice
+else
+    echo "LibreOffice is already installed"
+fi
 
 # create symbolic links from dotfiles dir to $HOME
 # make sure that dotfiles dir is equal to ~/Projects/dotfiles/
