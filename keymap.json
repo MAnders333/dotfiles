@@ -9,6 +9,7 @@
     "command": "delete"
   },
   { "keys": ["q"], "type": "exec", "command": "exit" },
+  { "keys": ["s"], "type": "exec", "command": "sync" },
   { "keys": [" "], "command": "todo toggle $n" },
   { "keys": ["t"], "command": "todo clear $n" },
   { "keys": ["c"], "type": "function", "command": "toggle_console" },
@@ -40,7 +41,7 @@
   {
     "keys": ["y"],
     "type": "prompt",
-    "command": "cp $n \"\"",
+    "command": "cp $n",
     "cursorPosition": -2
   },
   {

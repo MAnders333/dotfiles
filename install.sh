@@ -59,13 +59,6 @@ if [[ ! -d "/Applications/Zotero.app" ]] ; then
 else
     echo "Zotero is already installed"
 fi
-# toggl
-if [[ ! -d "/Applications/TogglDesktop.app" ]] ; then
-    echo "Installing Toggl..."
-    brew cask install toggl
-else
-    echo "Toggl is already installed"
-fi
 # rectangle
 if [[ ! -d "/Applications/Rectangle.app" ]] ; then
     echo "Installing Rectangle..."
