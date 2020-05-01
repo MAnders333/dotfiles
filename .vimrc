@@ -6,6 +6,7 @@ set expandtab " turns tab into 'tabstop' number of spaces
 set hlsearch " highlights searches
 set ignorecase " ignore case when searching
 set incsearch " turns on incremental search
+set mouse=a " enables mouse
 set nobackup " prevents backups before writing a file
 set nocompatible " makes vim more useful
 set noerrorbells " turns off errorbells
@@ -30,6 +31,13 @@ let mapleader=" "
 autocmd InsertEnter * norm zz
 " exit insert mode 
 inoremap jj <Esc>
+" movements
+nnoremap gl $
+nnoremap gh 0
+nnoremap gk H
+nnoremap gj L
+nnoremap gt gg
+nnoremap gb G
 " saving and quitting
 nnoremap <leader>s :w<CR>
 vnoremap <leader>s <Esc>:w<CR>gv
@@ -42,9 +50,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-L> <C-W><C-L>
-" simple resizing of splits
-nnoremap - <C-W>-
-nnoremap + <C-W>+
 " simple yanking
 nnoremap <S-Y> y$
 vmap <leader>y "+y
@@ -52,10 +57,9 @@ vmap <leader>y "+y
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 " inserting blank lines without entering insert mode
-nnoremap <Enter> o<ESC>
-nnoremap <S-Enter> <S-o><ESC>
+nnoremap <CR> o<ESC>
 " stop highlighting search result
-nnoremap <silent> ,<space> :nohlsearch<CR>
+nnoremap <silent> <space>, :nohlsearch<CR>
 
 "" install vim-plug as plugin-manager if needed
 if empty(glob('$HOME/.vim/autoload/plug.vim'))
@@ -83,11 +87,22 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " autocompletion, go to definiti
 call plug#end()
 
 " set color scheme
-highlight ColorColumn ctermbg=0 guibg=lightgrey
 colorscheme gruvbox
 
+" background see through
+hi! Normal ctermbg=NONE guibg=NONE 
+hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE 
+
 " configs for vim-airline
+let g:airline_theme = 'base16_gruvbox_dark_hard'
+" show word count for specified filetypes
+let g:airline#extensions#wordcount#enabled = 1
+let g:airline#extensions#wordcount#filetypes = '\vnotes|help|markdown|rst|org|text|asciidoc|tex|mail'
+" show branch name under source control
 let g:airline#extensions#branch#enabled = 1
+" show added or removed lines under source control
+let g:airline#extensions#hunks#non_zero_only = 1 
+" show coc errors and warnings
 let g:airline#extensions#coc#enabled = 1
 let airline#extensions#coc#error_symbol = 'E:'
 let airline#extensions#coc#warning_symbol = 'W:'
@@ -95,7 +110,7 @@ let airline#extensions#coc#stl_format_err = '%E{[%e(#%fe)]}'
 let airline#extensions#coc#stl_format_warn = '%W{[%w(#%fw)]}'
 
 " configs for nerdtree
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle %<CR>
 let NERDTreeShowHidden=1
 
 " configs for nerdcommenter
@@ -103,12 +118,6 @@ filetype plugin on
 let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
 let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDCompactSexyComs = 1 " Use compact syntax for prettified multi-line comments
-
-" configs for syntastic
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 " configs for ctrlp from readme
 let g:ctrlp_map = '<c-p>' " remaps fuzzy find
@@ -190,7 +199,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 " Formatting selected code.
 xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
 augroup mygroup
   autocmd!
   " Setup formatexpr specified filetype(s).
