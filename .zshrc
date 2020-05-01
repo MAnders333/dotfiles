@@ -20,3 +20,4 @@ export PATH
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.promtline.sh ] && source ~/.promptline.sh

@@ -6,6 +6,7 @@ alias lla="ls -la"
 alias c="clear"
 
 # tmux
+alias tmux="tmux -u"
 alias ts="tmux new -s"
 alias ta="tmux attach"
 alias tat="tmux attach -t"
