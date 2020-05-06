@@ -1,6 +1,7 @@
 Pipfile
 .env
-*/tmp/*
+*/tmp/
 *.sqlite
-*/resources/*
+*/resources/
 *log*
+*/node_modules/
