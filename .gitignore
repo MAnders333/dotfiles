@@ -1,1 +1,6 @@
 Pipfile
+.env
+*/tmp/*
+*.sqlite
+*/resources/*
+*log*
