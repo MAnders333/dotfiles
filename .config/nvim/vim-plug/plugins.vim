@@ -21,6 +21,8 @@ Plug 'tpope/vim-fugitive' " git commands
 Plug 'kien/ctrlp.vim' " fuzzy find files
 Plug 'jremmen/vim-ripgrep' " fast grep
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " autocompletion, go to definition, linting, ...
+Plug 'unblevable/quick-scope' " quicker movements with f and t
+Plug 'norcalli/nvim-colorizer.lua' " colorizes color codes
 call plug#end()
 
 " Automatically install missing plugins on startup
