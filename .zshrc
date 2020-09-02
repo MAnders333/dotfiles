@@ -16,8 +16,8 @@ set -o vi
 
 # Setting PATH for Python 3.8
 PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/opt/icu4c/bin:${PATH}"
+PATH="/usr/local/texlive/2020/bin/x86_64-darwin:$PATH"
 export PATH
-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.promtline.sh ] && source ~/.promptline.sh
