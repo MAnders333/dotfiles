@@ -12,8 +12,5 @@ done
 cd "$HOME/projects/configs/dotfiles"
 for item in .*
 do
-    if [[ $item -ne ".git" ]]
-    then
-	    ln -s "$HOME/projects/configs/dotfiles/$item" "$HOME/$item"
-    fi
+    ln -s "$HOME/projects/configs/dotfiles/$item" "$HOME/$item"
 done
