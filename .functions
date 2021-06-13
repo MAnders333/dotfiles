@@ -1,31 +1,29 @@
-function create(){
-    cd ~/Projects/project-initialization/
-    pipenv run python create.py $1
-    cd ../
+function createProject(){
+    projectDir="~/projects/"
+    cd ~/projects/project-initialization/
+    source .myvenv/bin/activate
+    python create.py $1
+    cd $projectDir
     mkdir $1
     cd ./$1
     git init
     touch README.md
     touch .gitignore
     touch .env
+    touch requirements.txt
+    python -m venv .myvenv
     echo '.env' >> .gitignore
-    pipenv --three
+    echo '.myvenv' >> .gitignore
     git add .
     git commit -m "first commit"
     git remote add origin https://github.com/MAnders333/$1.git
     git push -u origin master
-    nvim README.md
-}
-
-function continue(){
-    cd ~/Projects/$1
-    nvim .
 }
 
 function financials(){
-    cd ~/Projects/financial-analysis/
-    pipenv run python financials.py $1
-    open -a Microsoft\ Excel monthly_budget.xlsx
+    cd ~/projects/financial-analysis/
+    source env/bin/activate
+    python3 src/financials.py $1 
 }
 
 function apply(){
